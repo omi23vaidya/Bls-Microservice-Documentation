@@ -7,6 +7,10 @@ A microservice to centralize communication between our company and back office
 
 ## Account Details [/accounts/{accountNumber}]
 
++ Parameters
+    + accountNumber (long) - BETA customer account number
+
+
 ### Provides information on the account and account number [GET]
 
 + Response 200 (application/json)
@@ -98,6 +102,9 @@ A microservice to centralize communication between our company and back office
         
 ## Assosciated Persons Inquiry [/accounts/{accountNumber}/associatedPersons]
 
++ Parameters
+    + accountNumber (long) - BETA customer account number
+
 ### Provides a display of legal address and demographic information for individuals who are account holders or who are assosciated with an account [GET]
 
 + Response 200 (application/json)
@@ -135,6 +142,11 @@ A microservice to centralize communication between our company and back office
         ]
 
 ## Tax Lot Closed Holdings Inquiry [/accounts/{accountNumber}/taxlots/closed?{StartDate}&{EndDate}]
+
++ Parameters
+    + accountNumber (long) - BETA customer account number
+    + StartDate (DateTime) - Beginning date for a specific period of closed tax lot activity.
+    + EndDate (DateTime) - End date for a specific period of closed tax lot activity.
 
 ### Provides information for closed tax lots for customer accounts at our firm [GET]
 
@@ -180,6 +192,9 @@ A microservice to centralize communication between our company and back office
     
 ## Account Demographics Inquiry [/accounts/{accountNumber}/demographics]
 
++ Parameters
+    + accountNumber (long) - BETA customer account number
+
 ### Displays demographic information for customer accounts.  [GET]
 
 + Response 200 (application/json)
@@ -216,6 +231,9 @@ A microservice to centralize communication between our company and back office
         }
         
 ## Account Valuation Inquiry [/accounts/{accountNumber}/balances]
+
++ Parameters
+    + accountNumber (long) - BETA customer account number
 
 ### Displays all money balances in a customer's account.  [GET]
 
@@ -280,6 +298,9 @@ A microservice to centralize communication between our company and back office
         
 ## Account Violation Inquiry [/accounts/{accountNumber}/violations]
 
++ Parameters
+    + accountNumber (long) - BETA customer account number
+
 ###  Allows to monitor individualized violation information on customer accounts. [GET]
 
 + Response 200 (application/json)
@@ -295,6 +316,9 @@ A microservice to centralize communication between our company and back office
         ]
         
 ## ACH Instruction Inquiry [/accounts/{accountNumber}/achInstructions]
+
++ Parameters
+    + accountNumber (long) - BETA customer account number
 
 ### The ACH Instruction Inquiry enables the viewing of ACH instruction records. ACH instructions are used by brokerage firms to electronically transfer income balances, free credit money, and trading debits automatically to an individual's checking or savings account at his or her bank.  [GET]
 
@@ -324,6 +348,9 @@ A microservice to centralize communication between our company and back office
         ]
         
 ## Positions by Account Inquiry [/accounts/{accountNumber}/positions]
+
++ Parameters
+    + accountNumber (long) - BETA customer account number
 
 ### Displays positions for a specific account. Information for each security includes market price, total long and short quantities and values.   [GET]
 
