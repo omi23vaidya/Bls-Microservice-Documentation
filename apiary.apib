@@ -214,3 +214,162 @@ A microservice to centralize communication between our company and back office
             "liquidity": null,
             "cookie": null
         }
+        
+## Account Valuation Inquiry [/accounts/{accountNumber}/balances]
+
+### Displays all money balances in a customer's account.  [GET]
+
++ Response 200 (application/json)
+        
+        {
+            "name": null,
+            "rep": "HB01",
+            "accountNumber": 10089885,
+            "branch": "TPHB",
+            "lastActivityDate": "2017-07-01T00:00:00.0000000-04:00",
+            "primaryMmfName": null,
+            "wrapPlanId": null,
+            "pendingVisaCharges": 0,
+            "cashBalance": 226.92,
+            "foreignBalance": 0,
+            "totalCashBalance": 226.92,
+            "marginBalance": 0,
+            "otherAccountTypesTotalBalance": 0,
+            "dividendAndInterestBalance": 2.46,
+            "totalMmfBalance": 0,
+            "specialMiscellaneousAccountBalance": 0,
+            "fundsAvailable": 226.92,
+            "cashAccountMarketValue": 1503.9,
+            "cashAccountForeignMarketValue": 0,
+            "marginAccountLongMarketValue": 0,
+            "marginAccountShortMarketValue": 0,
+            "otherAccountTypesMarketValue": 0,
+            "otherCashAccountsMarketValue": 0,
+            "miscOutsideInvestmentsMarketValue": 0,
+            "marginableSecuritiesCashAvailable": 751.93,
+            "marginableSecuritiesMarketValue": 1503.9,
+            "totalMarketValue": 1503.9,
+            "fedCall": 0,
+            "houseCall": 0,
+            "dailyDebitInterest": 0,
+            "mtdDebitInterest": 0,
+            "marginAccountEquityPercentage": 0,
+            "marginAccountTotalEquity": 0,
+            "marginAccountCashAvailable": 0,
+            "marginAccountBuyingPower": 0,
+            "totalAccountValue": 1733.28,
+            "commissionTotal": 0,
+            "totalLongMarketValue": 1503.9,
+            "todayMmfCreditDebit": 0,
+            "balanceAsOfTradeDate": 226.92,
+            "balanceAsOfSettleDate": 226.92,
+            "tradingCash": 0,
+            "freeAndClearBalanceAsOfSettleDate": 226.92,
+            "freeCrMiscDr": 226.92,
+            "nonShareholderAccruedMtdInterest": 0,
+            "numberOfTradesTtm": 23,
+            "totalCashWithoutBorrowing": 226.92,
+            "frozenFundsForChecks": 0,
+            "whenIssuedBalance": 0,
+            "unconfirmedMfOrders": 0,
+            "mmfBalances": {},
+            "calculatedCashBalance": 226.92,
+            "calculatedMarginAccountBuyingPower": 453.84,
+            "cookie": null
+        }
+        
+## Account Violation Inquiry [/accounts/{accountNumber}/violations]
+
+###  Allows to monitor individualized violation information on customer accounts. [GET]
+
++ Response 200 (application/json)
+        
+        [
+            {
+                "accountNumber": 10089885,
+                "specialHandlingCode": "80",
+                "changed": "2017-07-14T00:00:00.0000000-04:00",
+                "violations": null,
+                "cookie": null
+            }
+        ]
+        
+## ACH Instruction Inquiry [/accounts/{accountNumber}/achInstructions]
+
+### The ACH Instruction Inquiry enables the viewing of ACH instruction records. ACH instructions are used by brokerage firms to electronically transfer income balances, free credit money, and trading debits automatically to an individual's checking or savings account at his or her bank.  [GET]
+
++ Response 200 (application/json)
+        
+        [
+            {
+                "accountNumber": 10089885,
+                "sub": 211,
+                "source": "EFT",
+                "openDate": "2017-05-24T00:00:00.0000000-04:00",
+                "preNotificationDate": "2017-05-24T00:00:00.0000000-04:00",
+                "effectiveDate": "2017-05-24T00:00:00.0000000-04:00",
+                "abaRoutingNumber": "021000021",
+                "customerName1": "PLAID CHECKING",
+                "customerName2": null,
+                "itemNumber": 1,
+                "instructionStatus": "A",
+                "bankAccountNumber": "9900001702",
+                "bankAccountType": 0,
+                "lastAchActivity": "0001-01-01T00:00:00.0000000-05:00",
+                "hasOnDemandCredit": true,
+                "hasOnDemandDebit": false,
+                "bankName": "JPMORGAN CHASE BANK, NA",
+                "customerName": "PLAID CHECKING"
+            }
+        ]
+        
+## Positions by Account Inquiry [/accounts/{accountNumber}/positions]
+
+### Displays positions for a specific account. Information for each security includes market price, total long and short quantities and values.   [GET]
+
++ Response 200 (application/json)
+        
+        [
+            {
+                "symbol": "AET",
+                "cusip": "00817Y108",
+                "securityNumber": 1042822,
+                "accountNumber": 10089885,
+                "accountType": 1,
+                "location": "SEG",
+                "marginable": true,
+                "marketPrice": 156.79,
+                "value": 470.37,
+                "quantity": 3,
+                "percentOfTotal": null,
+                "description": null,
+                "securityType": 0,
+                "quoteStatus": 0,
+                "isLocked": false,
+                "isMargin": false,
+                "isMoneyMarketFund": false,
+                "isCash": false,
+                "cookie": null
+            },
+            {
+                "symbol": "AMANX",
+                "cusip": "022865109",
+                "securityNumber": 1097612,
+                "accountNumber": 10089885,
+                "accountType": 1,
+                "location": "SKF",
+                "marginable": true,
+                "marketPrice": 48.65,
+                "value": 1.02,
+                "quantity": 0.021,
+                "percentOfTotal": null,
+                "description": null,
+                "securityType": 0,
+                "quoteStatus": 0,
+                "isLocked": false,
+                "isMargin": false,
+                "isMoneyMarketFund": false,
+                "isCash": false,
+                "cookie": null
+            }
+        ]
