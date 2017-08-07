@@ -95,3 +95,122 @@ A microservice to centralize communication between our company and back office
                 "cookie": null
             }
         ]
+        
+## Assosciated Persons Inquiry [/accounts/{accountNumber}/associatedPersons]
+
+### Provides a display of legal address and demographic information for individuals who are account holders or who are assosciated with an account [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "name": "TRADE PMR",
+                "accountNumber": 10089885,
+                "homePhone": "3525555555",
+                "taxId": null,
+                "taxIdFormat": null,
+                "zipCode": "32605",
+                "firstName": "TRADE PMR",
+                "lastName": null,
+                "state": "FL",
+                "city": "GAINESVILLE",
+                "useZip4Switch": false,
+                "birthdate": null,
+                "emailAddress": "JPINCHOT@TRADEPMR.COM",
+                "occupation": 3,
+                "employerName": "MCTESTERSON FARMS",
+                "employerAddress": "2511 NW 41ST ST ASDF",
+                "employerCity": "GAINESVILLE",
+                "employerState": "FL",
+                "employerZip": "32606",
+                "nameType": 1,
+                "middleName": null,
+                "nasdAffiliate": false,
+                "employerUseZip4Switch": false,
+                "primaryOwnerAssociation": 0,
+                "customerType": 1,
+                "addressLine1": "6707 W NEWBERRY RD",
+                "addressLine2": null
+            }
+        ]
+
+## Tax Lot Closed Holdings Inquiry [/accounts/{accountNumber}/taxlots/closed?{StartDate}&{EndDate}]
+
+### Provides information for closed tax lots for customer accounts at our firm [GET]
+
++ Response 200 (application/json) 
+
+    {
+        "taxLots": 
+        [
+            {
+                "description": "AIRPORTS OF THAILAND ADR PUBLIC CO LTD-ADR",
+                "securityType": 2,
+                "percentGainLoss": -0.1615384615384615384615384615,
+                "symbol": "AIPUY",
+                "cusip": "00950R100",
+                "securityNumber": 1054520,
+                "name": "TRADE PMR",
+                "quantity": 1,
+                "closeAmount": 10.9,
+                "closeDate": "2017-02-27T00:00:00.0000000-05:00",
+                "closePrice": 10.9,
+                "realized": -2.1,
+                "shortTermGainOrLoss": -2.1,
+                "longTermGainOrLoss": 0,
+                "costAmount": 13,
+                "openDate": "2017-02-23T00:00:00.0000000-05:00",
+                "adjustedUnitCost": 0,
+                "unitCost": 13,
+                "term": "SHORT",
+                "adjustedCost": 0,
+                "cookie": null
+            }
+        ],
+            "footer": 
+            {
+                "percentGainLoss": 0.0061170065443265357801359511,
+                "closeAmount": 1271.42,
+                "realized": 7.73,
+                "shortTermGainOrLoss": -5.75,
+                "longTermGainOrLoss": 13.48,
+                "costAmount": 1263.69
+            }
+    }
+    
+## Account Demographics Inquiry [/accounts/{accountNumber}/demographics]
+
+### Displays demographic information for customer accounts.  [GET]
+
++ Response 200 (application/json)
+
+        {
+            "accountNumber": 10089885,
+            "birthdate": "0001-01-01T00:00:00.0000000-05:00",
+            "spouseBirthdate": "0001-01-01T00:00:00.0000000-05:00",
+            "gender": 0,
+            "maritalStatus": 0,
+            "emailAddress": "TEST@FOOBAR.COM",
+            "dependents": 0,
+            "retired": false,
+            "incomeTaxBracket": 0,
+            "businessNature": 0,
+            "occupation": 3,
+            "employerName": "MCTESTERSON FARMS",
+            "employerAddress": "2511 NW 41ST ST ASDF",
+            "employerCity": "GAINESVILLE",
+            "employerState": "FL",
+            "employerZip": "32606",
+            "employerZipPlus4": null,
+            "annualIncome": null,
+            "netWorth": null,
+            "liquidNetWorth": null,
+            "investExperienceWithStocks": 0,
+            "investExperienceWithOptions": 0,
+            "investExperienceWithMutualFunds": 0,
+            "investExperienceWithInsuranceAnnuities": 0,
+            "investExperienceWithBonds": 0,
+            "timeHorizon": null,
+            "liquidity": null,
+            "cookie": null
+        }
