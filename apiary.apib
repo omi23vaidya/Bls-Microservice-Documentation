@@ -1,0 +1,56 @@
+FORMAT: 1A
+HOST: http://localhost:port_number/
+
+# BLSMicroservice
+
+A microservice to centralize communication between our company and back office
+
+## Account Details [/accounts/{accountNumber}]
+
+### List all details of an account by it's account number [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "accountnumber": 10089885,
+                "rep": "HB01",
+                "branch": "TPHB",
+                "sub": "211",
+                "firm": "001"
+                "documentationCategory": 24,
+                "accountType": 21,
+                "birthdate": "0001-01-01T00:00:00.0000000-05:00",
+                "primaryEmailAddress": "TEST@FOOBAR.COM"
+                "numNameAddressLines": 4,
+                "nameAndAddressLine1": "2511 NW 41ST STREET",
+                "nameAndAddressLine2": "NEW",
+                "nameAndAddressLine3": "6707 W NEWBERRY RD",
+                "nameAndAddressLine4": "GAINESVILLE, FL, 32605",
+                "nameAndAddressLine5": "GAINESVILLE, FL 32606-6630",
+                "nameAndAddressLine6": null,
+                "alphaKeys": null,
+                "alphaKeys1": "TRADE PMR",
+                "alphaKeys2": "DEV ACCOUNT",
+                "alphaKeys3": "SUNDRY ACCOUNT HB01",
+                "alphaKeys4": null,
+                "irsNameAndAddressLines1": 1,
+                "irsNameAndAddressLines2": 0,
+                "taxId": null,
+                "state": "FL"
+                "country": null,
+                "residentId": null,
+                "province": null,
+                "city": "GAINESVILLE",
+                "zipCode": "32606",
+                "zipPlus4Code": "6630",
+                "homePhone": "8502618430",
+                "homePhone2": null,
+                "businessPhone": "8502618430",
+                "businessPhone2": null,
+                "cellPhone1": null,
+                "cellPhone2": null,
+                "otherPhone": "8502618430",
+                "fax": null
+            }
+        ]
