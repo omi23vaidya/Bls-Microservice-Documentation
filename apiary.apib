@@ -10,6 +10,9 @@ A microservice to centralize communication between our company and back office
 + Parameters
     + accountNumber (long) - BETA customer account number
 
++ Headers
+    + Authorization - bearer access_token
+
 
 ### Provides information of the account based on account number [GET]
 
@@ -144,7 +147,7 @@ A microservice to centralize communication between our company and back office
 ## Tax Lot Closed Holdings Inquiry [/accounts/{accountNumber}/taxlots/closed?{StartDate}&{EndDate}]
 
 + Parameters
-    + accountNumber (long) - BETA customer account number
+    + accountNumber (long) - BETA customer account number.
     + StartDate (DateTime) - Beginning date for a specific period of closed tax lot activity.
     + EndDate (DateTime) - End date for a specific period of closed tax lot activity.
 
