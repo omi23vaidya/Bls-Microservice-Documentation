@@ -11,8 +11,7 @@ A microservice to centralize communication between our company and back office
     + accountNumber (long) - BETA customer account number
 
 + Headers
-    + Authorization - bearer access_token
-
+    Authorization : bearer access_token
 
 ### Provides information of the account based on account number [GET]
 
@@ -107,7 +106,10 @@ A microservice to centralize communication between our company and back office
 
 + Parameters
     + accountNumber (long) - BETA customer account number
-
+    
++ Headers
+    Authorization : bearer access_token
+    
 ### Provides a display of legal address and demographic information for individuals who are account holders or who are assosciated with an account [GET]
 
 + Response 200 (application/json)
@@ -150,6 +152,9 @@ A microservice to centralize communication between our company and back office
     + accountNumber (long) - BETA customer account number.
     + StartDate (DateTime) - Beginning date for a specific period of closed tax lot activity.
     + EndDate (DateTime) - End date for a specific period of closed tax lot activity.
+
++ Headers
+    Authorization : bearer access_token
 
 ### Provides information for closed tax lots for customer accounts at our firm [GET]
 
@@ -198,6 +203,9 @@ A microservice to centralize communication between our company and back office
 + Parameters
     + accountNumber (long) - BETA customer account number
 
++ Headers
+    Authorization : bearer access_token
+
 ### Displays demographic information for customer accounts.  [GET]
 
 + Response 200 (application/json)
@@ -237,6 +245,9 @@ A microservice to centralize communication between our company and back office
 
 + Parameters
     + accountNumber (long) - BETA customer account number
+
++ Headers
+    Authorization : bearer access_token
 
 ### Displays all money balances in a customer's account.  [GET]
 
@@ -304,6 +315,9 @@ A microservice to centralize communication between our company and back office
 + Parameters
     + accountNumber (long) - BETA customer account number
 
++ Headers
+    Authorization : bearer access_token
+
 ###  Allows to monitor individualized violation information on customer accounts. [GET]
 
 + Response 200 (application/json)
@@ -322,6 +336,9 @@ A microservice to centralize communication between our company and back office
 
 + Parameters
     + accountNumber (long) - BETA customer account number
+
++ Headers
+    Authorization : bearer access_token
 
 ### The ACH Instruction Inquiry enables the viewing of ACH instruction records. ACH instructions are used by brokerage firms to electronically transfer income balances, free credit money, and trading debits automatically to an individual's checking or savings account at his or her bank.  [GET]
 
@@ -354,6 +371,9 @@ A microservice to centralize communication between our company and back office
 
 + Parameters
     + accountNumber (long) - BETA customer account number
+
++ Headers
+    Authorization : bearer access_token
 
 ### Displays positions for a specific account. Information for each security includes market price, total long and short quantities and values.   [GET]
 
